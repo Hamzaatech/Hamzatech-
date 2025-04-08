@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - HAMZATECH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="menu-btn">☰</div>
+        <div class="hamza-text">Hamza</div>
+    </div>
+
+    <!-- Hidden Navigation Menu -->
+    <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="skills.html">Skills</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Services Section (at the bottom) -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="services-section">
+                <h2>Services</h2>
+                <h3>Web Development</h3>
+                <p>We create stunning and functional websites using HTML, CSS, JavaScript, and Python. Whether it's a business site, portfolio, or e-commerce platform, we’ve got you covered.</p>
+                <h3>UI/UX Design</h3>
+                <p>We design user-friendly interfaces that enhance user experience. From wireframes to final designs, we ensure your app or website looks professional and is easy to navigate.</p>
+                <h3>Graphic Design</h3>
+                <p>Need a logo, business card, or social media graphics? Our design team creates high-quality visuals that make your brand stand out.</p>
+                <h3>Video Editing</h3>
+                <p>Professional video editing services for YouTube, ads, and social media content using Filmora, Adobe Premiere, and After Effects.</p>
+                <h3>Crypto Consultancy</h3>
+                <p>Learn how to trade, invest, and analyze cryptocurrencies. We provide guidance on technical analysis, blockchain technology, and secure crypto transactions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

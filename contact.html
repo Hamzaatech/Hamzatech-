@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - HAMZATECH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="menu-btn">☰</div>
+        <div class="hamza-text">Hamza</div>
+    </div>
+
+    <!-- Hidden Navigation Menu -->
+    <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="skills.html">Skills</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Contact Section (at the bottom) -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="contact-section">
+                <h2>Contact</h2>
+                <p>Let’s work together! Contact us via:</p>
+                <p>Email: <a href="mailto:hamzatechmedia@gmail.com">hamzatechmedia@gmail.com</a></p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1FnosxGQL9/"><img src="facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="https://x.com/_Hamzatech"><img src="X.png" alt="X" class="social-icon"></a>
+                    <a href="https://t.me/Hamzaatech"><img src="telegram.png" alt="Telegram" class="social-icon"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

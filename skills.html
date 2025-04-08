@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - HAMZATECH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="menu-btn">☰</div>
+        <div class="hamza-text">Hamza</div>
+    </div>
+
+    <!-- Hidden Navigation Menu -->
+    <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="skills.html">Skills</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Skills Section (at the bottom) -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="skills-section">
+                <h2>Skills</h2>
+                <h3>Designing Software</h3>
+                <ul>
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe Illustrator</li>
+                    <li>Adobe XD</li>
+                    <li>Figma</li>
+                </ul>
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Python, C#</li>
+                </ul>
+                <h3>Video Editing Software</h3>
+                <ul>
+                    <li>Filmora</li>
+                    <li>Adobe Premiere Pro</li>
+                    <li>Adobe After Effects</li>
+                    <li>CapCut</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

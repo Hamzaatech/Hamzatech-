@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - HAMZATECH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="menu-btn">☰</div>
+        <div class="hamza-text">Hamza</div>
+    </div>
+
+    <!-- Hidden Navigation Menu -->
+    <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="skills.html">Skills</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Blog Section (at the bottom) -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="blog-section">
+                <h2>Blog</h2>
+                <h3>How to Build a Responsive Website from Scratch</h3>
+                <h3>The Future of Cryptocurrency & Blockchain</h3>
+                <h3>Best UI/UX Practices for Mobile Apps</h3>
+                <p><a href="#">Read More Articles</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

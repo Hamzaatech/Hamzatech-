@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+}
+
+.menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.hamza-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Hidden Menu */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    color: #000;
+    padding: 60px 20px;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-menu a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background: #f5f5f5;
+}
+
+/* Hero Section with Parallax */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 80px 40px 20px 40px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.hero-line {
+    position: relative;
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    margin-right: -40px;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 20px;
+}
+
+.hero-line .timeline-circle {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff 50%, #e0e0e0 100%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 0;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.contact-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.6);
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 0 40px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.portfolio-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #000;
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.portfolio-note {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #222 0%, #444 100%); /* Darker, sleeker gradient */
+    padding: 8px 14px; /* Slightly larger for realism */
+    border-radius: 20px; /* Softer, modern corners */
+    border: 1px solid #555; /* Subtle border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease; /* Smooth all changes */
+    text-transform: uppercase; /* Adds a polished feel */
+    letter-spacing: 0.5px; /* Slight spacing for readability */
+}
+
+.portfolio-note:hover {
+    transform: scale(1.1); /* Slight pop on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.6); /* Black glow */
+    background: linear-gradient(135deg, #333 0%, #555 100%); /* Brighter hover gradient */
+}
+
+/* Slider Section */
+.slider {
+    padding: 50px 20px;
+    overflow: hidden;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid #000;
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.slide:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.skills h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.skills-container::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: calc(100% - 20px);
+    width: 2px;
+    background-color: #333;
+}
+
+.skills-list {
+    text-align: left;
+}
+
+.skills-list h3 {
+    margin-top: 20px;
+}
+
+.skills .timeline-circle {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff 50%, #e0e0e0 100%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #f5f5f5;
+    clear: both;
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-me-btn {
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.text-me-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.6);
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.social-icons a:hover .social-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skills-container {
+        padding-left: 30px;
+    }
+
+    .skills-container::before {
+        left: 10px;
+        height: calc(100% - 15px);
+    }
+
+    .skills .timeline-circle {
+        left: 5px;
+    }
+
+    .footer {
+        padding: 15px;
+        margin-top: 30px;
+    }
+
+    .footer-content {
+        padding: 0 10px;
+    }
+
+    .nav-menu {
+        width: 200px;
+        padding: 50px 15px;
+    }
+
+    .nav-menu a {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 80px 20px 20px 20px;
+    }
+
+    .hero-line {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .portfolio {
+        padding: 0 20px;
+    }
+
+    .portfolio-grid {
+        gap: 15px;
+    }
+}

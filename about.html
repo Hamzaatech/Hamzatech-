@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HAMZATECH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="menu-btn">☰</div>
+        <div class="hamza-text">Hamza</div>
+    </div>
+
+    <!-- Hidden Navigation Menu -->
+    <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="skills.html">Skills</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- About Us Section (at the bottom) -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="about-section">
+                <h2>About Us</h2>
+                <p>Welcome to HAMZATECH,
+                
+                where innovation meets technology. We specialize in web development, UI/UX design, graphic design, and crypto consultancy. Our mission is to deliver high-quality digital solutions that help businesses and individuals thrive in the tech world.</p>
+                <p>At HAMZATECH, we are passionate about turning ideas into reality. With expertise in multiple programming languages and design tools, we create visually appealing and functional projects tailored to our clients' needs.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
